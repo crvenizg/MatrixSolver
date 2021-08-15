@@ -1,0 +1,37 @@
+﻿<Window x:Class="MatrixSolver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+        xmlns:local="clr-namespace:MatrixSolver"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1100" Width="1400">
+    <Grid>
+        <RadioButton Name="rbtnInverzCramer" Checked="btn_TypeExample" GroupName="opcija" Content="Inverz Cramerovim pravilom" HorizontalAlignment="Left" Margin="19,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnInverz" Checked="btn_TypeExample" GroupName="opcija" Content="Inverz elementarnim transformacijama" HorizontalAlignment="Left" Margin="19,49,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnRang" Checked="btn_TypeExample" GroupName="opcija" Content="Rang" HorizontalAlignment="Left" Margin="272,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnRjesavanje" Checked="btn_TypeExample" GroupName="opcija" Content="Rješavanje jednadžbi" HorizontalAlignment="Left" Margin="272,49,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnVektorski" Checked="btn_TypeExample" GroupName="opcija" Content="Vektorski umnožak" HorizontalAlignment="Left" Margin="427,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnRavninaTocke" Checked="btn_TypeExample" GroupName="opcija" Content="Ravnina preko 3 točke" HorizontalAlignment="Left" Margin="427,49,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnDeterminanta" Checked="btn_TypeExample" GroupName="opcija" Content="Determinanta matrice" HorizontalAlignment="Left" Margin="579,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnSustavPrekoCramera" Checked="btn_TypeExample" GroupName="opcija" Content="Cramerovo rješavanje jednadžbi" HorizontalAlignment="Left" Margin="579,49,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnMnozenjeMatrica" Checked="btn_TypeExample" GroupName="opcija" Content="Množenje matrica" HorizontalAlignment="Left" Margin="779,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnInputOutputMatricaPrvaVrsta" Checked="btn_TypeExample" GroupName="opcija" Content="Input output analiza 1" HorizontalAlignment="Left" Margin="935,23,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="rbtnInputOutputMatricaDrugaVrsta" Checked="btn_TypeExample" GroupName="opcija" Content="Input output analiza 2" HorizontalAlignment="Left" Margin="935,49,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Broj redova" HorizontalAlignment="Left" Margin="18,84,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtBrRedova" HorizontalAlignment="Left" Height="23" Margin="95,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+        <Label Content="Broj stupaca" HorizontalAlignment="Left" Margin="215,84,0,0" VerticalAlignment="Top" Width="78"/>
+        <TextBox Name="txtBrStupaca" HorizontalAlignment="Left" Height="23" Margin="314,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Elementi po redovima" HorizontalAlignment="Left" Margin="18,125,0,0" VerticalAlignment="Top" Width="143" Height="35"/>
+        <TextBox Name="txtElements" FontSize="18" HorizontalAlignment="Left" Height="35" Margin="204,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="969"/>
+
+        <controls:FormulaControl Name="txtPostupak" Margin="19,194,19,27"/>
+        <Button IsDefault="True" IsEnabled="False" Name="btnIzracunaj" FontWeight="Bold" Content="Calculate" HorizontalAlignment="Left" Margin="779,84,0,0" VerticalAlignment="Top" Width="194" Height="26" Click="Calculate_Click"/>
+        <Button IsCancel="True" Content="RESET ALL" HorizontalAlignment="Left" Margin="589,84,0,0" VerticalAlignment="Top" Width="167" Click="Reset_Click" Height="26"/>
+        <Button Click="btn_clearFields_click" Content="Clear fields" HorizontalAlignment="Left" Margin="427,84,0,0" VerticalAlignment="Top" Width="136" Height="26"/>
+
+
+    </Grid>
+</Window>
